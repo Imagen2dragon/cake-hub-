@@ -1,0 +1,6 @@
+{
+  "name": "CakeHub SaaS - Cake Catalogue & Ordering Platform",
+  "description": "Progressive Web Application (PWA) for bakeries to manage digital cake catalogues, customized online ordering, deposit tracking, WhatsApp/Telegram integration, and AI recommendation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

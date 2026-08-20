@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Montserrat', sans-serif;
+
+  --color-primary: #8b4b58;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #d88c9a;
+  --color-on-primary-container: #5d2633;
+  --color-primary-fixed: #ffd9de;
+  --color-primary-fixed-dim: #ffb2bf;
+  --color-on-primary-fixed: #390917;
+  --color-on-primary-fixed-variant: #6f3441;
+
+  --color-secondary: #605e5a;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #e6e2dc;
+  --color-on-secondary-container: #666460;
+  --color-secondary-fixed: #e6e2dc;
+  --color-secondary-fixed-dim: #c9c6c0;
+  --color-on-secondary-fixed: #1c1c18;
+  --color-on-secondary-fixed-variant: #484743;
+
+  --color-tertiary: #73575c;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #ba999f;
+  --color-on-tertiary-container: #493136;
+  --color-tertiary-fixed: #ffd9df;
+  --color-tertiary-fixed-dim: #e1bec3;
+  --color-on-tertiary-fixed: #2a161a;
+  --color-on-tertiary-fixed-variant: #5a4045;
+
+  --color-surface: #fff8f6;
+  --color-surface-dim: #e4d7d3;
+  --color-surface-bright: #fff8f6;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #fef1ec;
+  --color-surface-container: #f8ebe6;
+  --color-surface-container-high: #f2e6e1;
+  --color-surface-container-highest: #ede0db;
+
+  --color-on-surface: #201a18;
+  --color-on-surface-variant: #524345;
+  --color-inverse-surface: #362f2c;
+  --color-inverse-on-surface: #fbeee9;
+  --color-outline: #847375;
+  --color-outline-variant: #d7c1c4;
+  --color-surface-tint: #8b4b58;
+  --color-surface-variant: #ede0db;
+  --color-background: #fff8f6;
+  --color-on-background: #201a18;
+
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+}
+
+/* Material symbols font settings */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.material-symbols-outlined.fill-1 {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Custom shadows & gradients */
+.card-shadow {
+  box-shadow: 0 12px 24px -6px rgba(94, 68, 73, 0.12);
+}
+
+.chart-gradient {
+  background: linear-gradient(180deg, rgba(216, 140, 154, 0.2) 0%, rgba(216, 140, 154, 0) 100%);
+}
+
+.glass-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.88) 0%, rgba(254, 241, 236, 0.78) 100%);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid rgba(215, 193, 196, 0.35);
+  box-shadow: 0 14px 35px -10px rgba(94, 68, 73, 0.12), inset 0 1px 1px rgba(255, 255, 255, 0.9);
+  position: relative;
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(215, 193, 196, 0.3) 50%, rgba(139, 75, 88, 0.25));
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+  pointer-events: none;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f8ebe6;
+}
+::-webkit-scrollbar-thumb {
+  background: #d7c1c4;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8b4b58;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
